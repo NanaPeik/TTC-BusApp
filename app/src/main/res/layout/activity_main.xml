@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+        <Button
+            android:id="@+id/getRoutBtn"
+            android:layout_width="match_parent"
+            android:background="@color/pink"
+            android:textSize="20dp"
+            android:textColor="#fff"
+            android:layout_height="match_parent"
+            android:onClick="getRouts"
+            android:text="Get Routes"></Button>
+<!--        <Button-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:onClick="getBusStops"-->
+<!--            android:text="Get Bus Stops"></Button>-->
+<!--        <Button-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:onClick="getTabloInfo"-->
+<!--            android:text="Get Tablo Info"></Button>-->
+    </LinearLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ListView
+            android:id="@+id/routes"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </ListView>
+        <LinearLayout
+            android:id="@+id/progress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <ProgressBar
+                android:layout_width="100dp"
+                android:layout_height="100dp">
+            </ProgressBar>
+
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>
